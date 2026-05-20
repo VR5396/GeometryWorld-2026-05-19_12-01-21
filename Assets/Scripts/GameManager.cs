@@ -5,13 +5,19 @@ public class GameManager : MonoBehaviour
 {
     public int NoOfChancesToGive;
     public static int RestartNumb = 0;
+    public static int NoOfChancesLeft;
     public GameObject LevelFailedAnimation;
     public GameObject MobileTouchControls;
-    
+
+    private void Start()
+    {
+        NoOfChancesLeft = NoOfChancesToGive - RestartNumb;
+    }
     public void Restart()
     {
 
         RestartNumb = RestartNumb + 1;
+        NoOfChancesLeft = NoOfChancesToGive - RestartNumb;
         if (RestartNumb < NoOfChancesToGive)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -28,9 +34,13 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public int NoOfLivesLeft()
+    {
+        return NoOfChancesLeft;
+    }
     public void OnLevelFailed()
     {
-        Invoke("Restart", 2f);
+        Invoke("Restart", 3f);
     }
     public void OnLevelCompleted()
     {

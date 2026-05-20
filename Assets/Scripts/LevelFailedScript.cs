@@ -1,11 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelFailedScript : MonoBehaviour
 {
     public void OnLevelFailed()
     {
-        Application.Quit();
-        Debug.Log("GameEnded");
+        SceneManager.LoadScene(0);
     }
     
 }

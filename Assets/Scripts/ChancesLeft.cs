@@ -1,16 +1,15 @@
 using UnityEngine;
+using TMPro;
 
 public class ChancesLeft : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private int NoOfChancesLeft;
+    public TMP_Text NoOfChances;
+
+    public void FixedUpdate()
     {
-        
+        NoOfChancesLeft = FindFirstObjectByType<GameManager>().NoOfLivesLeft();
+        NoOfChances.text = NoOfChancesLeft .ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
