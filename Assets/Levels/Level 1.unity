@@ -2032,7 +2032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd94ef285e370c42b1d921f027fbe6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  NoOfChancesToGive: 5
+  NoOfChancesToGive: 10
   LevelFailedAnimation: {fileID: 1578462165}
   MobileTouchControls: {fileID: 650446125}
 --- !u!1 &969892483
