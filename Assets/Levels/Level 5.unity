@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f9152f5c4018f49a5e232dde2d92b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreScript
-  player: {fileID: 0}
+  player: {fileID: 1235661394}
   Scoretext: {fileID: 1722962750}
 --- !u!114 &1722962750
 MonoBehaviour:
